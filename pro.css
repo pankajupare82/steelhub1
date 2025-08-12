@@ -1,0 +1,278 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 :root \{\
+    --primary: #2c3e50;\
+    --primary-dark: #1a2530;\
+    --secondary: #e74c3c;\
+    --accent: #3498db;\
+    --success: #27ae60;\
+    --warning: #f39c12;\
+    --danger: #e74c3c;\
+    --light: #f8f9fa;\
+    --gray: #95a5a6;\
+    --dark: #343a40;\
+\}\
+\
+* \{\
+    margin: 0;\
+    padding: 0;\
+    box-sizing: border-box;\
+\}\
+\
+body \{\
+    font-family: 'Inter', sans-serif;\
+    background-color: #f5f7fa;\
+    color: var(--dark);\
+    line-height: 1.6;\
+\}\
+\
+#app \{\
+    display: flex;\
+    flex-direction: column;\
+    min-height: 100vh;\
+\}\
+\
+/* Header Styles */\
+.header \{\
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);\
+    color: white;\
+    padding: 1rem 0;\
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);\
+    position: sticky;\
+    top: 0;\
+    z-index: 1000;\
+\}\
+\
+.header-container \{\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: center;\
+    max-width: 1200px;\
+    margin: 0 auto;\
+    padding: 0 1rem;\
+\}\
+\
+.logo \{\
+    display: flex;\
+    align-items: center;\
+    gap: 0.75rem;\
+    font-weight: 700;\
+    font-size: 1.25rem;\
+\}\
+\
+.logo-icon \{\
+    color: var(--accent);\
+    font-size: 1.5rem;\
+\}\
+\
+/* Main Content */\
+.main-content \{\
+    flex: 1;\
+    padding: 2rem 0;\
+    max-width: 1200px;\
+    width: 100%;\
+    margin: 0 auto;\
+\}\
+\
+/* Dashboard Grid */\
+.dashboard-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+    gap: 1.5rem;\
+    margin-bottom: 2rem;\
+\}\
+\
+/* Cards */\
+.card \{\
+    background: white;\
+    border-radius: 0.5rem;\
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);\
+    overflow: hidden;\
+    transition: transform 0.3s ease, box-shadow 0.3s ease;\
+\}\
+\
+.card:hover \{\
+    transform: translateY(-5px);\
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);\
+\}\
+\
+.card-header \{\
+    background: var(--primary);\
+    color: white;\
+    padding: 1rem;\
+    font-weight: 600;\
+\}\
+\
+.card-body \{\
+    padding: 1.5rem;\
+\}\
+\
+/* Price Display */\
+.price-display \{\
+    font-size: 2rem;\
+    font-weight: 700;\
+    margin: 1rem 0;\
+    color: var(--primary);\
+\}\
+\
+.price-change \{\
+    display: flex;\
+    align-items: center;\
+    gap: 0.5rem;\
+    font-weight: 500;\
+\}\
+\
+.trend-up \{\
+    color: var(--success);\
+\}\
+\
+.trend-down \{\
+    color: var(--danger);\
+\}\
+\
+/* Charts */\
+.chart-container \{\
+    position: relative;\
+    height: 250px;\
+    margin: 1rem 0;\
+\}\
+\
+/* API Status */\
+.api-status \{\
+    display: inline-flex;\
+    align-items: center;\
+    gap: 0.5rem;\
+    padding: 0.5rem 1rem;\
+    border-radius: 2rem;\
+    font-size: 0.875rem;\
+    margin-top: 1rem;\
+\}\
+\
+.api-active \{\
+    background: rgba(39, 174, 96, 0.1);\
+    color: var(--success);\
+\}\
+\
+.api-inactive \{\
+    background: rgba(231, 76, 60, 0.1);\
+    color: var(--danger);\
+\}\
+\
+.status-indicator \{\
+    width: 0.75rem;\
+    height: 0.75rem;\
+    border-radius: 50%;\
+\}\
+\
+.status-active \{\
+    background: var(--success);\
+\}\
+\
+.status-inactive \{\
+    background: var(--danger);\
+\}\
+\
+/* Market Feed */\
+.market-feed \{\
+    background: white;\
+    border-radius: 0.5rem;\
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);\
+    overflow: hidden;\
+    margin-bottom: 2rem;\
+\}\
+\
+.feed-header \{\
+    background: var(--primary);\
+    color: white;\
+    padding: 1rem;\
+    display: flex;\
+    justify-content: space-between;\
+    align-items: center;\
+    font-weight: 600;\
+\}\
+\
+.feed-container \{\
+    max-height: 400px;\
+    overflow-y: auto;\
+\}\
+\
+.feed-item \{\
+    padding: 1rem;\
+    border-bottom: 1px solid #eee;\
+    display: flex;\
+    gap: 1rem;\
+\}\
+\
+.feed-item:last-child \{\
+    border-bottom: none;\
+\}\
+\
+.feed-icon \{\
+    width: 2.5rem;\
+    height: 2.5rem;\
+    border-radius: 50%;\
+    display: flex;\
+    align-items: center;\
+    justify-content: center;\
+    flex-shrink: 0;\
+\}\
+\
+.feed-icon.news \{\
+    background: rgba(52, 152, 219, 0.1);\
+    color: var(--accent);\
+\}\
+\
+.feed-icon.price \{\
+    background: rgba(39, 174, 96, 0.1);\
+    color: var(--success);\
+\}\
+\
+.feed-icon.alert \{\
+    background: rgba(231, 76, 60, 0.1);\
+    color: var(--danger);\
+\}\
+\
+.feed-content \{\
+    flex: 1;\
+\}\
+\
+.feed-title \{\
+    font-weight: 600;\
+    margin-bottom: 0.25rem;\
+\}\
+\
+.feed-time \{\
+    font-size: 0.75rem;\
+    color: var(--gray);\
+\}\
+\
+/* Footer */\
+.footer \{\
+    background: var(--primary-dark);\
+    color: white;\
+    padding: 2rem 0;\
+    margin-top: auto;\
+\}\
+\
+.footer-container \{\
+    max-width: 1200px;\
+    margin: 0 auto;\
+    padding: 0 1rem;\
+\}\
+\
+/* Responsive */\
+@media (max-width: 768px) \{\
+    .header-container \{\
+        flex-direction: column;\
+        gap: 1rem;\
+    \}\
+    \
+    .dashboard-grid \{\
+        grid-template-columns: 1fr;\
+    \}\
+\}}
